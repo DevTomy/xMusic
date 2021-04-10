@@ -1,18 +1,7 @@
 <?php
 error_reporting(0);
 //header('Content-Type: application/json');
-//=============
-$token = '662507811:AAEyelBtSXuaU8O79wqQaWH9ocAw4WuTL0o';
-$check = json_decode(file_get_contents("https://api.telegram.org/bot".$token."/getChatMember?chat_id=@DinoTM&user_id=".$_GET['chatid']))->result->status;
-//=============
-$servername = "localhost";
-$username = "vestor_api";
-$password = "424057099mm";
-$dbname = "vestor_api"; 
-$connect = mysqli_connect($servername, $username, $password, $dbname);
-//=============
-//$connect->query("INSERT INTO user (requests,chatid,username,isjoined,other) VALUES ('0','$Chat','0','number','$StarterChat')");
-//=============
+
 if($_GET["action"]=="search"){
 
 $Get = json_decode(file_get_contents("https://apin1mservice.com/pc/1.0/search.php?text=".urlencode($_GET['text'])),true);
